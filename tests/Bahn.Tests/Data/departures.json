@@ -1,0 +1,47 @@
+{
+  "departures": [
+    {
+      "tripId": "1|200|0|80|26102026",
+      "stop": { "type": "stop", "id": "8000107", "name": "Freiburg(Breisgau) Hbf" },
+      "when": "2026-10-26T16:50:00+01:00",
+      "plannedWhen": "2026-10-26T16:42:00+01:00",
+      "delay": 480,
+      "platform": "3",
+      "plannedPlatform": "3",
+      "direction": "Offenburg",
+      "line": { "type": "line", "id": "re-7", "name": "RE 7", "productName": "RE", "product": "regional", "mode": "train" }
+    },
+    {
+      "tripId": "1|300|0|80|26102026",
+      "when": "2026-10-26T16:35:00+01:00",
+      "plannedWhen": "2026-10-26T16:35:00+01:00",
+      "delay": 0,
+      "platform": "5",
+      "plannedPlatform": "2",
+      "direction": "Basel Bad Bf",
+      "line": { "type": "line", "name": "ICE  104", "productName": "ICE", "product": "nationalExpress" }
+    },
+    {
+      "tripId": "1|400|0|80|26102026",
+      "when": null,
+      "plannedWhen": "2026-10-26T16:55:00+01:00",
+      "delay": null,
+      "platform": null,
+      "plannedPlatform": "7",
+      "direction": "Breisach",
+      "cancelled": true,
+      "line": { "type": "line", "name": "S 1", "productName": "S", "product": "suburban" }
+    },
+    {
+      "tripId": "1|500|0|80|26102026",
+      "when": "2026-10-26T17:10:00+01:00",
+      "plannedWhen": "2026-10-26T17:10:00+01:00",
+      "delay": null,
+      "platform": "1",
+      "plannedPlatform": "1",
+      "direction": "Titisee",
+      "line": { "type": "line", "name": "RB 7", "productName": "RB", "product": "regional" }
+    }
+  ],
+  "realtimeDataUpdatedAt": 1793029000
+}

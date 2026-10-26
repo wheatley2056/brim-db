@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<timetable station='Freiburg(Breisgau) Hbf' eva='8000107'>
+  <s id="-1234-2610261640-1" eva="8000107">
+    <ar ct="2610261645"/>
+    <dp ct="2610261647" cp="4"/>
+  </s>
+  <s id="-5678-2610261700-1" eva="8000107">
+    <dp cs="c"/>
+  </s>
+  <s id="-9999-2610261645-1" eva="8000107">
+    <dp/>
+  </s>
+</timetable>
