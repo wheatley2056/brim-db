@@ -1,0 +1,26 @@
+{
+  "id": "de.brim.bahn",
+  "name": "Bahn",
+  "version": "1.0.0",
+  "entry": "BrimBahn.exe",
+  "api": "1",
+  "slots": ["compact.leading", "compact.trailing"],
+  "permissions": ["network"],
+  "widgets": [
+    { "id": "departures", "name": "Abfahrten", "description": "Nächste Züge an deinen Bahnhöfen mit Verspätung und Gleis", "glyph": "", "sizes": ["large", "small", "medium", "wide", "full"] },
+    { "id": "commute", "name": "Pendelstrecke", "description": "Nächste Verbindungen von A nach B", "glyph": "", "sizes": ["medium", "wide", "large"] }
+  ],
+  "settings": [
+    { "key": "stations", "type": "string", "label": "Lieblingsbahnhöfe, mit Komma getrennt (z. B. Freiburg Hbf, Offenburg)", "default": "" },
+    { "key": "commuteFrom", "type": "string", "label": "Pendelstrecke von (Bahnhof)", "default": "" },
+    { "key": "commuteTo", "type": "string", "label": "Pendelstrecke nach (Bahnhof)", "default": "" },
+    { "key": "walkMinutes", "type": "string", "label": "Weg zum Bahnhof in Minuten (frühere Züge werden ausgeblendet)", "default": "0" },
+    { "key": "notch", "type": "bool", "label": "Nächsten Zug in der Notch zeigen", "default": true },
+    { "key": "notchMinutes", "type": "string", "label": "… sobald er in höchstens so vielen Minuten fährt", "default": "30" },
+    { "key": "alerts", "type": "bool", "label": "Melden, wenn der nächste Zug ausfällt, sich verspätet oder das Gleis wechselt", "default": true },
+    { "key": "trainsOnly", "type": "bool", "label": "Nur Züge (keine Busse, Straßen- und U-Bahnen)", "default": true },
+    { "key": "dbClientId", "type": "string", "label": "Optional: Client-ID für die Timetables-API der DB (developers.deutschebahn.com)", "default": "" },
+    { "key": "dbApiKey", "type": "string", "label": "Optional: API-Key für die Timetables-API der DB", "default": "" },
+    { "key": "server", "type": "string", "label": "Server für transport.rest (ohne Schlüssel)", "default": "https://v6.db.transport.rest" }
+  ]
+}

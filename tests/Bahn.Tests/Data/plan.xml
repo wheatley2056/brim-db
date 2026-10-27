@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<timetable station='Freiburg(Breisgau) Hbf'>
+  <s id="-1234-2610261640-1">
+    <tl f="D" t="p" o="800486" c="RE" n="17012"/>
+    <ar pt="2610261638" pp="2" l="7" ppth="Basel Bad Bf|Müllheim(Baden)"/>
+    <dp pt="2610261640" pp="2" l="7" ppth="Emmendingen|Riegel-Malterdingen|Offenburg"/>
+  </s>
+  <s id="-5678-2610261700-1">
+    <tl f="F" t="p" o="80" c="ICE" n="104"/>
+    <dp pt="2610261700" pp="3" ppth="Offenburg|Karlsruhe Hbf|Frankfurt(Main)Hbf"/>
+  </s>
+  <s id="-9999-2610261645-1">
+    <tl f="S" t="p" o="800486" c="S" n="87001"/>
+    <dp pt="2610261645" pp="7" l="S1" ppth="Gottenheim|Breisach"/>
+  </s>
+  <s id="-1111-2610261650-9">
+    <tl f="D" t="p" o="800486" c="RE" n="17099"/>
+    <ar pt="2610261650" pp="1" l="7" ppth="Offenburg"/>
+  </s>
+  <s id="-2222-2610261650-3">
+    <tl f="D" t="p" o="800486" c="Bus" n="1"/>
+    <dp pt="2610261650" pp="" l="SEV" ppth="Titisee"/>
+  </s>
+</timetable>

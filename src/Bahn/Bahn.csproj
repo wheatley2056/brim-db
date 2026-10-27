@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Bahn-Plugin für Brim: Abfahrten an Lieblingsbahnhöfen und eine Pendelstrecke mit Verspätungen, Ausfällen und
+    Gleiswechseln, in der Notch und als Widgets auf „Jetzt“. Daten von transport.rest (ohne Schlüssel) oder der
+    Timetables-API der Deutschen Bahn (mit Client-ID und API-Key). Build-Ausgabe ist der fertige Plugin-Ordner.
+  -->
+  <PropertyGroup>
+    <!-- Kein Konsolenfenster, wenn Brim das Plugin startet; stdout/stderr landen trotzdem im Plugin-Log. -->
+    <OutputType>WinExe</OutputType>
+    <!-- Nur HTTP, kein Win32: läuft und testet auch außerhalb von Windows. -->
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>BrimBahn</AssemblyName>
+    <RootNamespace>Brim.Bahn</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(BrimRoot)\src\Brim.Sdk\Brim.Sdk.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="plugin.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

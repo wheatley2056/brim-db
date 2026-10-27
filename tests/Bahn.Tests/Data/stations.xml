@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<stations>
+  <station p="1|2|3" meta="8098107" name="Freiburg(Breisgau) Hbf" eva="8000107" ds100="RF" db="true" creationts="25-10-01 00:00:00.000"/>
+</stations>
