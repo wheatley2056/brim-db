@@ -1,5 +1,6 @@
 # Bauen und testen; bei einem Tag v<Version> den fertigen Plugin-Ordner als Release-Zip anhängen
-# (für die Plugin-Bibliothek von Brim, siehe catalog/ im Brim-Repository).
+# (für die Plugin-Bibliothek von Brim, siehe catalog/ im Brim-Repository). Von Hand gestartet mit
+# „release“ legt der Lauf Tag und Release v<Version aus plugin.json> selbst an.
 name: Build
 
 on:
@@ -7,6 +8,12 @@ on:
     branches: [main]
     tags: ["v*"]
   pull_request:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "Release v<Version aus plugin.json> anlegen"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -64,3 +71,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release create "${{ github.ref_name }}" artifacts/brim-db.zip --title "Bahn-Plugin ${{ github.ref_name }}" --generate-notes
+
+      - name: Release (von Hand)
+        if: github.event_name == 'workflow_dispatch' && inputs.release
+        working-directory: brim-db
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          $version = (Get-Content artifacts/bahn/plugin.json -Raw | ConvertFrom-Json).version
+          gh release create "v$version" artifacts/brim-db.zip --target "${{ github.sha }}" --title "Bahn-Plugin v$version" --generate-notes
